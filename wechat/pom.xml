@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright(c) 2016 - 2020, Clouds Studio Holding Limited. All rights reserved.
+  ~ Project : components
+  ~ File : pom.xml
+  ~ Date : 7/22/20, 12:51 AM
+  ~ Author : Hsi Chu
+  ~ Contact : hiylo@live.com
+  -->
+
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>components</artifactId>
+        <groupId>org.hiylo</groupId>
+        <version>3.0.0</version>
+    </parent>
+    <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.hiylo.components</groupId>
+    <artifactId>wechat</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.hiylo.components</groupId>
+            <artifactId>fentity</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.wxpay</groupId>
+            <artifactId>wxpay-sdk</artifactId>
+            <version>0.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hiylo.components</groupId>
+            <artifactId>commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>net.sf.json-lib</groupId>-->
+        <!--<artifactId>json-lib</artifactId>-->
+        <!--<version>${net.sf.json.version}</version>-->
+        <!--<classifier>jdk15</classifier>-->
+        <!--</dependency>-->
+    </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>apiclient_cert.p12</include>
+                </includes>
+            </resource>
+        </resources>
+        <!--<plugins>-->
+        <!--<plugin>-->
+        <!--<groupId>com.github.wvengen</groupId>-->
+        <!--<artifactId>proguard-maven-plugin</artifactId>-->
+        <!--<version>2.0.14</version>-->
+        <!--<executions>-->
+        <!--<execution>-->
+        <!--<phase>package</phase>-->
+        <!--<goals>-->
+        <!--<goal>proguard</goal>-->
+        <!--</goals>-->
+        <!--</execution>-->
+        <!--</executions>-->
+        <!--<configuration>-->
+        <!--<proguardVersion>6.0.3</proguardVersion>-->
+        <!--<injar>${project.build.finalName}.jar</injar>-->
+        <!--<outjar>${project.build.finalName}.jar</outjar>-->
+        <!--<obfuscate>true</obfuscate>-->
+        <!--<options>-->
+        <!--<option>-ignorewarnings</option>-->
+        <!--<option>-dontshrink</option>-->
+        <!--<option>-dontoptimize</option>-->
+        <!--<option>-keepnames interface **</option>-->
+        <!--<option>-keepparameternames</option>-->
+        <!--<option>-adaptclassstrings</option>-->
+        <!--<option>-dontskipnonpubliclibraryclasses</option>-->
+        <!--<option>-dontskipnonpubliclibraryclassmembers</option>-->
+        <!--<option>-allowaccessmodification</option>-->
+        <!--<option>-useuniqueclassmembernames</option>-->
+        <!--<option>-keeppackagenames</option>-->
+        <!--<option>-keepattributes-->
+        <!--Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,LocalVariable*Table,*Annotation*,Synthetic,EnclosingMethod-->
+        <!--</option>-->
+        <!--<option>-keepclassmembers public class * {void set*(***);*** get*();}</option>-->
+        <!--<option>-keepclassmembers enum * { **[] $VALUES; public *; }</option>-->
+        <!--<option>-keep class * { &lt;methods&gt;; }</option>-->
+        <!--&lt;!&ndash;<option>-injars target/${project.build.finalName}.jar</option>&ndash;&gt;-->
+        <!--<option>-keepclassmembers class * {-->
+        <!--@org.springframework.beans.factory.annotation.Autowired *;-->
+        <!--@org.springframework.beans.factory.annotation.Value *;-->
+        <!--}-->
+        <!--</option>-->
+        <!--</options>-->
+
+        <!--<libs>-->
+        <!--<lib>${java.home}/lib/rt.jar</lib>-->
+        <!--<lib>${java.home}/lib/jce.jar</lib>-->
+        <!--</libs>-->
+        <!--</configuration>-->
+        <!--<dependencies>-->
+        <!--<dependency>-->
+        <!--<groupId>net.sf.proguard</groupId>-->
+        <!--<artifactId>proguard-base</artifactId>-->
+        <!--<version>6.0.3</version>-->
+        <!--</dependency>-->
+        <!--</dependencies>-->
+        <!--</plugin>-->
+        <!--</plugins>-->
+    </build>
+</project>

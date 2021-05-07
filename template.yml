@@ -1,0 +1,13 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: Aliyun::Serverless-2018-04-03
+Resources:
+  Orders:
+    Type: Aliyun::Serverless::Service
+    PutOrdersToStorage:
+      Type: Aliyun::Serverless::Function
+      Properties:
+        Handler: org.hiylo.App::handleRequest
+        Runtime: java8
+        MemorySize: 512.0
+        CodeUri: ./Orders/PutOrdersToStorage/target/fc-1.0-RELEASE.jar
+        Timeout: 60.0

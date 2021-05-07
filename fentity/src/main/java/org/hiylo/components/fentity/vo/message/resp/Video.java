@@ -1,0 +1,31 @@
+/*
+ * Copyright(c) 2016 - 2020, Clouds Studio Holding Limited. All rights reserved.
+ * Project : components
+ * File : Video.java
+ * Date : 7/22/20, 12:51 AM
+ * Author : Hsi Chu
+ * Contact : hiylo@live.com
+ */
+
+package org.hiylo.components.fentity.vo.message.resp;
+
+public class Video {
+    private String MediaId;
+    private String ThumbMediaId;
+
+    public String getMediaId() {
+        return this.MediaId;
+    }
+
+    public void setMediaId(String mediaId) {
+        this.MediaId = mediaId;
+    }
+
+    public String getThumbMediaId() {
+        return this.ThumbMediaId;
+    }
+
+    public void setThumbMediaId(String thumbMediaId) {
+        this.ThumbMediaId = thumbMediaId;
+    }
+}
