@@ -1,5 +1,7 @@
 # components
 
+[![Join the chat at https://gitter.im/hiylo/components](https://badges.gitter.im/hiylo/components.svg)](https://gitter.im/hiylo/components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 <p align="center">
   <a href="https://github.com/spring-projects/spring-boot">
     <img src="https://img.shields.io/badge/spring--boot-2.2.1.RELEASE-brightgreen.svg" alt="spring-boot">
